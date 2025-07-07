@@ -34,6 +34,7 @@ Welcome to **Letter Generator**, a simple and handy web app that helps users gen
 ## 📸 Demo
 
 > <img src="images/preview.png" alt="Letter Generator Screenshot" width="600"/>
+<br>
 > Example: `images/demo.png`
 
 ---
