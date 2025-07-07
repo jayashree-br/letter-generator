@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Letter Generator</title>
+    <link rel="icon" href="mail.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="node.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="nav-container">
+            <img src="mail.png" alt="Logo" width="30px" height="30px">
+            <h1>Business Letter Generator</h1>
+            <nav>
+                <ul class="nav-tabs">
+                    <li><a href="home.html">Business Letter Generator</a></li>
+                    <li><a href="home1.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="profile-container">
+            <a href="user-profile.html">
+                <img src="user-profile.jpg" alt="User Profile" class="profile-pic">
+            </a>
+        </div>
+    </header>
+
+
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Search Bar -->
+        <div class="search-container" style="text-align:center; margin: 20px;">
+                <input type="text" id="searchInput" placeholder="Search for a letter..." onkeyup="filterLetterOptions()" style="padding: 8px; width: 300px; font-size: 16px;">
+        </div>
+        <section class="two">
+            <label for="letter-type">Choose a Letter Type:</label>
+            <br><br>
+            <select id="letter-type" onchange="showLetterForm()">
+                <option value="">-- Select Letter Type --</option>
+                <option value="cover">Cover Letter (Business Letter)</option>
+                <option value="leave"> Sick Leave Letter (Leave Letter)</option>
+                <option value="resign">Resignation Letter (Business Letter)</option>
+                <option value="thank">Thank You Letter (Personal Letter)</option>
+                <option value="complain">Complain Letter</option>
+                <option value="peti">Petition Letter</option>
+            </select>
+        </section>
+
+        <section class="three">
+            <br><br>
+            <div class="letter-options">
+                <div class="option-card" onclick="selectLetterType('cover')">
+                    <img src="OIP (2).jpeg" alt="Cover Letter Icon">
+                    <p>Cover Letter</p>
+                </div>
+                <div class="option-card" onclick="selectLetterType('leave')">
+                    <img src="OIP.jpeg" alt="Sick Leave Icon">
+                    <p>Sick Leave Letter</p>
+                </div>
+                <div class="option-card" onclick="selectLetterType('resign')">
+                    <img src="download.jpeg" alt="Resignation Icon">
+                    <p>Resignation Letter</p>
+                </div>
+                <div class="option-card" onclick="selectLetterType('thank')">
+                    <img src="OIP (1).jpeg" alt="Thank You Icon">
+                    <p>Thank You Letter</p>
+                </div>
+                <div class="option-card" onclick="selectLetterType('complain')">
+                    <img src="pexels-arturoaez220-9180894.jpg" alt="Complain Icon">
+                    <p>Complain Letter</p>
+                </div>
+                <div class="option-card" onclick="selectLetterType('peti')">
+                    <img src="6747.jpg" alt="Petition Icon">
+                    <p>Petition Letter</p>
+                </div>
+            </div>
+        </section>
+        <section id="letter-form"></section>
+
+
+        <!-- Dynamic Letter Form Section -->
+        <section id="letter-form"></section>
+
+        <!-- Generated Letter Template -->
+        <section id="letter-template"></section>
+
+        <!-- Action Buttons -->
+        <!-- Back Button -->
+        <button id="back-button" onclick="showOptions()" style="display: none;">Back</button>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; By Jayashree, Gopika, Amritha</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.profile-main {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.profile-pic-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #004080;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.user-info label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.user-info input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

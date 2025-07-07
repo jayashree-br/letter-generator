@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="profile-main">
+        <h2>User Profile</h2>
+        <div class="profile-details">
+            <img src="user-profile.jpg" alt="Profile Picture" class="profile-pic-large" id="profile-pic-preview">
+            <input type="file" id="profile-pic-upload" accept="image/*" onchange="updateProfilePic()">
+            <div class="user-info">
+                <label for="username">Name:</label>
+                <input type="text" id="username" value="John Doe">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="john.doe@example.com">
+
+                <button onclick="saveProfile()">Save Changes</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

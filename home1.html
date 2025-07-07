@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="contact-mail.png">
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <h1>Contact</h1>
+            <nav>
+                <ul class="nav-tabs">
+                    <li><a href="home.html">Business Letter Generator</a></li>
+                    <li><a href="home1.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="one">
+            <div class="ja">
+                <h2>Developer</h2>
+                <h3>Jayashree</h3>
+                <p>An Innovative Student pursuing B.Tech Computer Science (First year) from Manakula Institute of Technology 
+                    <br>Email:<i>jayashree2k007@gmail.com</i>
+                </p>
+                <br>
+                <a href="#"><img src="right-arrow-svgrepo-com.svg" alt="arrow" class="arrow-ja"></a>
+            </div>
+            <div class="go">
+                <h2>Designer</h2>
+                <h3>Gopika Govindhammal</h3>
+                <p>An Innovative Student pursuing B.Tech Computer Science (First year) from Manakula Institute of Technology 
+                    <br>Email:<i>gopika2k6@gmail.com</i>
+                </p>
+                <br>
+                <a href="#"><img src="right-arrow-svgrepo-com.svg" alt="arrow" class="arrow-go"></a>
+            </div>
+            
+            <div class="ha">
+                <h2>Presenter</h2>
+                <h3>Amritha</h3>
+                <p>An Innovative Student pursuing B.Tech Computer Science (First year) from Manakula Institute of Technology 
+                    <br>Email:<i>amir06@gmail.com</i>
+                </p>
+                <br>
+                <a href="#"><img src="right-arrow-svgrepo-com.svg" alt="arrow" class="arrow-ha"></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; By Jayashree, Gopika, Harshavarthini</p>
+    </footer>
+
+    <script>
+        function transitionElements(current, next) {
+            current.style.transition = 'opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out';
+            current.style.opacity = '0';
+            current.style.backgroundColor = '#080483';
+            current.style.color = '#fff';
+            
+            setTimeout(() => {
+                current.style.display = 'none';
+                next.style.display = 'flex';
+                next.style.opacity = '0';
+                setTimeout(() => {
+                    next.style.transition = 'opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out';
+                    next.style.opacity = '1';
+                    next.style.backgroundColor = '#fff';
+                    next.style.color = '#000';
+                }, 10);
+            }, 500);
+        }
+
+        document.querySelector('.arrow-ja').addEventListener('click', function() {
+            transitionElements(document.querySelector('.ja'), document.querySelector('.go'));
+        });
+
+        document.querySelector('.arrow-go').addEventListener('click', function() {
+            transitionElements(document.querySelector('.go'), document.querySelector('.ha'));
+        });
+
+        document.querySelector('.arrow-ha').addEventListener('click', function() {
+            transitionElements(document.querySelector('.ha'), document.querySelector('.ja'));
+        });
+    </script>
+</body>
+</html>

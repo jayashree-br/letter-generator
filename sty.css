@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    margin-top: 2px;
+    background: linear-gradient(90deg, #080483, #514cc7, #cccbf2);
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-tabs {
+    display: inline;
+}
+
+.nav-tabs li {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    list-style: none;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-tabs li:hover {
+    background-color: #5c58e5;
+}
+
+.nav-bar h1 {
+    font-size: 40px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* To ensure main content is not hidden behind the fixed header */
+    padding-bottom: 100px; /* To ensure main content is not hidden behind the fixed footer */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.one {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    display: flex;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.one p {
+    line-height: 30px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s, transform 3s;
+    border-radius: 20px;
+}
+
+img:hover {
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+.one h2 {
+    margin-bottom: 30px;
+}
+
+footer {
+    background: linear-gradient(90deg, #080483, #cccbf2);
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.ja, .go, .ha {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ja {
+    display: flex;
+}
+
+.go, .ha {
+    display: none;
+    opacity: 0px;
+}
